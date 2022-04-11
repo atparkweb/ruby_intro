@@ -9,4 +9,10 @@ module Exercises
   def solution_one
     (1..10).each { |num| puts num }
   end
+
+  ##
+  # Same as above, but only print out values greater than 5.
+  def solution_two
+    (1..10).each { |num| puts num if num > 5 }
+  end
 end
