@@ -15,4 +15,11 @@ module Exercises
   def solution_two
     (1..10).each { |num| puts num if num > 5 }
   end
+
+  ##
+  # Now, using the same array from #2, use the `select` method to extract all odd numbers
+  # into a new array.
+  def solution_three
+    (1..10).select(&:odd?)
+  end
 end
