@@ -23,5 +23,23 @@ module Exercises
     # Append `11` to the end of the original array. Prepend `0` to the beginning.
     arr.push(11)
     arr.unshift(0)
+
+    ## 5
+    # Get rid of `11`. And append a `3`.
+    arr.pop
+    arr.push(3)
+
+    ## 6
+    # Get rid of duplicates without specifically removing any one value.
+    arr.uniq!
+
+    ## 7
+    # What is the difference between an Array and Hash?
+    # A: A Hash uses a key to reference a value to store items, an Array uses numeric indexes.
+
+    ## 8
+    # Create a Hash, with one key-value pair, using both Ruby syntax styles.
+    hash_one = { :name => 'Andy'}
+    hash_two = { name: 'Andy' }
   end
 end
