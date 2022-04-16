@@ -107,9 +107,7 @@ module Exercises
     # begin with an "s" in the following array.
     arr = ['snow', 'winter', 'ice', 'slippery', 'salted roads', 'white trees']
 
-    arr.delete_if do |str|
-      str.start_with?('s')
-    end
+    arr.delete_if { |str| str.start_with?('s') }
 
     test(arr, ['winter', 'ice', 'white trees'], '13')
   end
