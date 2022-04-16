@@ -79,15 +79,13 @@ module Exercises
     ]
     contacts = { 'Joe Smith' => {}, 'Sally Johnson' => {} }
 
-    def info_to_map(values, map)
-      map[:email] = values[0]
-      map[:address] = values[1]
-      map[:phone] = values[2]
-    end
+    info_to_map = lambda { |values|
+      { email: values[0], address: values[1], phone: values[2] }
+    }
 
-    info_to_map(contact_data[0], contacts['Joe Smith'])
-    info_to_map(contact_data[1], contacts['Sally Johnson'])
-    test(contacts,
+    new_contacts = { 'Joe Smith' => info_to_map.call(contact_data[0]),
+                     'Sally Johnson' => info_to_map.call(contact_data[1]) }
+    test(new_contacts,
          {
            'Joe Smith' => { email: 'joe@email.com', address: '123 Main st.', phone: '555-123-4567' },
            'Sally Johnson' => { email: 'sally@email.com', address: '404 Not Found Dr.', phone: '123-234-3454' }
