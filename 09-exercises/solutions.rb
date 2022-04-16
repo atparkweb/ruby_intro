@@ -70,7 +70,7 @@ module Exercises
     # Q: Can hash values be arrays? Can you have an array of hashes? (give examples)
     # A:
 
-    # 11
+    ## 11
     # Given the following data structures, write a program that copies the information from the array into the empty
     # hash that applies to the correct person.
     contact_data = [
@@ -93,7 +93,7 @@ module Exercises
            'Sally Johnson' => { email: 'sally@email.com', address: '404 Not Found Dr.', phone: '123-234-3454' }
          }, 'Ex 11')
 
-    # 12
+    ## 12
     # Using the hash you created from the previous exercise, demonstrate how you would access Joe's email
     # and Sally's phone number.
     joe_email = contacts['Joe Smith'][:email]
@@ -101,5 +101,16 @@ module Exercises
 
     test(joe_email, 'joe@email.com', '12')
     test(sally_phone, '123-234-3454', '12')
+
+    ## 13
+    # Use Ruby's Array method delete_if and String method start_with? to delete all of the strings that
+    # begin with an "s" in the following array.
+    arr = ['snow', 'winter', 'ice', 'slippery', 'salted roads', 'white trees']
+
+    arr.delete_if do |str|
+      str.start_with?('s')
+    end
+
+    test(arr, ['winter', 'ice', 'white trees'], '13')
   end
 end
